@@ -13,8 +13,11 @@ public class Main {
         personalInfoDB.setAmount(1000L);
 
         BankAccountAdapter bankAccountAdapter = new BankAccountAdapter(legacyBankAccount, personalInfoDB);
-        AccountCreationService accountCreationService = new AccountCreationService(bankAccountAdapter.getId(),
-                bankAccountAdapter.getName(), bankAccountAdapter.getEmail(), bankAccountAdapter.getAmount());
+        AccountCreationService accountCreationService = new AccountCreationService(
+                bankAccountAdapter.getId(),
+                bankAccountAdapter.getName(),
+                bankAccountAdapter.getEmail(),
+                bankAccountAdapter.getAmount());
 
         accountCreationService.createAccount();
     }
